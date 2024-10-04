@@ -1,0 +1,7 @@
+U:\PRG\hra\hraknp\hraknp\obj\Debug\hraknp.csproj.AssemblyReference.cache
+U:\PRG\hra\hraknp\hraknp\obj\Debug\hraknp.csproj.CoreCompileInputs.cache
+U:\PRG\hra\hraknp\hraknp\bin\Debug\hraknp.exe.config
+U:\PRG\hra\hraknp\hraknp\bin\Debug\hraknp.exe
+U:\PRG\hra\hraknp\hraknp\bin\Debug\hraknp.pdb
+U:\PRG\hra\hraknp\hraknp\obj\Debug\hraknp.exe
+U:\PRG\hra\hraknp\hraknp\obj\Debug\hraknp.pdb
