@@ -1,0 +1,14 @@
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/bin/Debug/net8.0/ConsoleAppCalculator
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/bin/Debug/net8.0/ConsoleAppCalculator.deps.json
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/bin/Debug/net8.0/ConsoleAppCalculator.runtimeconfig.json
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/bin/Debug/net8.0/ConsoleAppCalculator.dll
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/bin/Debug/net8.0/ConsoleAppCalculator.pdb
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ConsoleAppCalculator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ConsoleAppCalculator.AssemblyInfoInputs.cache
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ConsoleAppCalculator.AssemblyInfo.cs
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ConsoleAppCalculator.csproj.CoreCompileInputs.cache
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ConsoleAppCalculator.dll
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/refint/ConsoleAppCalculator.dll
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ConsoleAppCalculator.pdb
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ConsoleAppCalculator.genruntimeconfig.cache
+/Users/annapotapovych/Desktop/безіменна папка/calculator/ConsoleAppCalculator/obj/Debug/net8.0/ref/ConsoleAppCalculator.dll
