@@ -15,67 +15,86 @@ namespace Calculator
 { 
     internal class Program
     {
-        static void Main(string[] args)
-        {   string input = "";
-            int number1 = 0;
-            int number2 = 0; // čísla, které budou užity v příkladu
-            int result = 0;
+        static bool end = false;
+        static float number = 0;
+        static float result = 0;
+        static void Main()
+        {
+            InputNumber();
 
-            Console.WriteLine("Napiš 1. číslo, jestli chcete však vypnout, napište stop"); // první číslo uživatele
-
-            while (input != "stop")
+            while (!end)
             {
-            number1 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Napiš 2. číslo: "); // druhé číslo uživatele
-            number2 = Convert.ToInt32(Console.ReadLine());
-            
-            Console.WriteLine("zadej matematickou operaci (znaménko) nebo odmocninu: "); // operace, kterou chce uživatel provést
-            string operation = Console.ReadLine();
-
-            if (operation.Length > 1) // jestli zadáno špatně, oznámí ještě jednou to napsát správně, ChatGPT
-            {
-                Console.WriteLine("Zadejte správně matematickou operaci: ");
-            }  
-
-
-            if (operation == "+") // sčítání
-            {
-                result = number1 + number2;
-                Console.WriteLine($"Výsledek: {number1} + {number2} = {result}");
+                InputOperation();
+                InputNumber();
             }
 
-            else if (operation == "-") // odčítání
-            {
-                result = number1 - number2;
-                Console.WriteLine($"Výsledek: {number1} - {number2} = {result}");
-            }
-
-            else if (operation == "*") // násobení
-            {
-                result = number1 * number2;
-                Console.WriteLine($"Výsledek: {number1} * {number2} = {result} ");
-            }
-
-            else if (operation == ":" || operation == "/") // dělení
-             {
-                result  = number1 / number2;
-                Console.WriteLine($"Výsledek: {number1} / {number2} = {result} ");
-             }
-
-            //else if (operation == "mocnina"){double result = Math.Pow(number1*number2);Console.WriteLine($"Výsledek: {number1} * {number2} to vše v mocnině = {result} ");}
-
-             else if(operation == "odmocnina") // odmocnění
-             {
-                double resultSqrt = Math.Sqrt(number1*number2);
-                Console.WriteLine($"Výsledek: {number1} * {number2} to vše v odmocnině = {result} ");
-             }
-
-            Console.WriteLine("Chcete vyřešit další příklad, napište číslo."); // přejde na další příklad
-            }
-
-            Console.ReadKey(); //aby se program neukoncil ihned, ale cekal na stisk klavesy od uzivatele.
+            Console.WriteLine($"Tvůj výsledek je {result}");
+            Console.ReadKey(); //aby se program neukoncil ihned
         }
-    }
+        static void InputNumber()
+        {
+            Console.WriteLine("Napiš číslo: ");
+
+            while (true)
+            {
+                 if (float.TryParse(Console.ReadLine(), out float result))
+                {  
+                    number = result;
+                    break;
+                }    
+                Console.Write("Napiš správně číslo!");
+            }
+             
+        }
+        static void InputOperation()
+        {
+            string[] validOperations = { "+", "-", "*", "/", ":", "mocnina", "odmocnina", "="};
+
+            string operation = "\n";
+            while (!validOperations.Contains(operation))
+            {
+                Console.WriteLine("Zadej operaci");
+                operation = Console.ReadLine();
+            }
+
+            if (operation == "+")
+            {
+                result += number;
+            }
+
+            else if (operation == "-")
+            {
+                result -= number;
+            }
+
+            else if ( number != 0 && (operation == ":" || operation == "/"))
+            {
+                result /= number;
+            }
+
+            else if (operation == "*")
+            {
+                result *= number;
+            }
+
+            else if (operation == "mocnina")
+            {
+                result = (float)Math.Pow(result, number);
+            }
+
+            else if (operation == "odmocnina")
+            {
+                result = (float)Math.Sqrt(result);
+            }
+
+            else if (operation == "=")
+            {
+                end = true;
+            }
+
+        }
+    }       
 }
+
+
 
