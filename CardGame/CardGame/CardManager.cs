@@ -12,7 +12,7 @@ namespace CardGame
         public static List<Card> deck = new List<Card>();
         public static List<Card> cardsOnField = new List<Card>();
 
-        public static bool RightCardWins(Card card1, Card card2)
+        public static bool RightCardWins(Card card1, Card card2) //kontroluje, jestli 2. karta může být dáná na 1.
         {
             if (card1.suit == card2.suit && card2.rank > card1.rank)
             {
@@ -25,28 +25,28 @@ namespace CardGame
             return false;
         }
 
-        public static Card GetCard()
+        public static Card GetCard() //bere kartu z balíčku karet
         {
             Card card = deck.Last();
             deck.Remove(card);
             return card;
         }
 
-        public static void CreateDeck()
+        public static void CreateDeck() // tvorba 32 karet
         {
             deck.Clear();
             foreach (var suit in Global.suits)
             {
-                for (int i = 6; i <= 14;  i++)
+                for (int i = Global.minCard; i <= Global.maxCard;  i++) // karty od 6 do A
                 {
                     deck.Add(new() { rank = i, suit = suit });
                 }
             }
-            Shuffle();
-            strongSuit = deck.Last().suit;
+            Shuffle(); 
+            strongSuit = deck[0].suit;
         }
 
-        public static void Shuffle()
+        public static void Shuffle() // mixuje karty
         {
             Random rnd = new Random();
 

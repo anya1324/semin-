@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            App app = new App();
+            App app = new App(); // začíná hru
         }
     }
 }

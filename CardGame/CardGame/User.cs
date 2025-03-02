@@ -22,7 +22,7 @@ namespace CardGame
             }
         }
 
-        public void Input()
+        public void Input() // vnější vstup hráče
         {
             var input = Console.ReadKey();
 
@@ -61,7 +61,7 @@ namespace CardGame
             }
         }
 
-        public override void PrintCards()
+        public override void PrintCards() //píše moje karty, jaké mám
         {
             for (int i = 0; i < cards.Count; i++)
             {

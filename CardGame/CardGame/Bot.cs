@@ -8,7 +8,7 @@ namespace CardGame
 {
     public class Bot : Player
     {
-        public override void Play()
+        public override void Play() //logika, jak a kdo bude hrát
         {
             if (CardManager.cardsOnField.Count % 2 == 1)
             {
@@ -31,7 +31,7 @@ namespace CardGame
             }
         }
 
-        public void Responce()
+        public void Responce() // bot přemýšlí jak bude hrát
         {
             for (int i = 0; i < cards.Count; i++)
             {
@@ -41,7 +41,7 @@ namespace CardGame
                     return;
                 }
             }
-            foreach (var item in CardManager.cardsOnField)
+            foreach (Card item in CardManager.cardsOnField)
             {
                 cards.Add(item);
             }

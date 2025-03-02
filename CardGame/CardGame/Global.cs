@@ -8,6 +8,8 @@ namespace CardGame
 {
     public static class Global
     {
-        public static string[] suits = { "Heart", "Diamond", "Spade", "Club" };
+        public static string[] suits = { "Heart", "Diamond", "Spade", "Club" }; //suits karet
+        public static int minCard = 6;
+        public static int maxCard = 14;
     }
 }

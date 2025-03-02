@@ -18,17 +18,17 @@ namespace CardGame
 
         public App()
         {
-            Console.CursorVisible = false;
+            Console.CursorVisible = false; //aby nebyl vidět kurzor
             CardManager.CreateDeck();
             current = user;
 
-            while (!gameEnd)
+            while (!gameEnd) // hra bude pokračovat, dokud nebude nová karta
             {
                 Round();
             }
 
             Console.Clear();
-            if (user.cards.Count > 0)
+            if (user.cards.Count > 0) //kontroluje, kdo vyhrál
             {
                 Console.WriteLine("You won!");
                 Console.WriteLine("bots remaining cards:");
@@ -47,24 +47,24 @@ namespace CardGame
                 }
             }
         }
-        public void Round()
+        public void Round() //kolo
         {
-            bot.GetHand();
+            bot.GetHand(); 
             user.GetHand();
 
-            WriteHeader();
+            WriteHeader(); //píše počet karet bota
 
             roundEnd = false;
-            while (!gameEnd && !roundEnd && current.cards.Count != 0)
+            while (!gameEnd && !roundEnd && current.cards.Count != 0) //když probíhá kolo
             {
                 WriteHeader();
                 current.Play();
                 ChangeCurrent();
             }
-            CardManager.cardsOnField.Clear();
+            CardManager.cardsOnField.Clear(); //maže karty, které byly v tomto kole už odehrané
         }
 
-        public void ChangeCurrent()
+        public void ChangeCurrent() //mění se z bota na hráče a naopak
         {
             userPlaying = !userPlaying;
             if (userPlaying)
@@ -77,7 +77,7 @@ namespace CardGame
             }
         }
 
-        public void WriteHeader()
+        public void WriteHeader() //popis hry pro hráče
         {
             Console.Clear();
 

@@ -9,21 +9,21 @@ namespace CardGame
 {
     public class Player
     {
-        public List<Card> cards = new List<Card>();
+        public List<Card> cards = new List<Card>(); //přesné karty, co má hráč nebo bot aktuálně ve "ruce"
 
-        public void PlayCard(int index)
+        public void PlayCard(int index) 
         {
-            if (cards.Count == 1 && CardManager.deck.Count == 0)
+            if (cards.Count == 1 && CardManager.deck.Count == 0) //kontroluje konec hry
             {
                 App.gameEnd = true;
                 return;
             }
             CardManager.cardsOnField.Add(cards[index]);
-            cards[index].Print();
-            cards.RemoveAt(index);
+            cards[index].Print(); //vypisuje kartu, co dávám
+            cards.RemoveAt(index); //vypisuje kartu, co dávám pryč
         }
 
-        public void GetHand()
+        public void GetHand() //bere karty, jestli je jich méně než 6
         {
             for (int i = cards.Count; i < 6; i++)
             {
@@ -35,7 +35,7 @@ namespace CardGame
             }
         }
 
-        public virtual void PrintCards()
+        public virtual void PrintCards() 
         {
             foreach (Card card in cards)
             {
@@ -43,6 +43,6 @@ namespace CardGame
             }
         }
 
-        public virtual void Play() { }
+        public virtual void Play() { } // základ pro způsob hraní hráče i bota
     }
 }

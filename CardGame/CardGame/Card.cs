@@ -9,8 +9,8 @@ namespace CardGame
 {
     public class Card
     {
-        public int rank {  get; set; }
-        public string suit { get; set; }
+        public int rank {  get; set; } //číslo nebo písmeno karty
+        public string suit { get; set; } //suit karty
 
         public void Print()
         {
@@ -20,7 +20,7 @@ namespace CardGame
             if (this.rank == 13) rank = "K";
             if (this.rank == 14) rank = "A";
 
-            string line = $"{rank} of {suit}";
+            string line = $"{rank} of {suit}"; //vypíše se v konzoli celá karta 
             for (int i = line.Length; i < 15; i++)
             {
                 line += " ";
